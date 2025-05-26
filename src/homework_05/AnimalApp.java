@@ -19,17 +19,10 @@ public class AnimalApp {
         JFrame frame = new JFrame("Preschool Letter Training");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 500);
-
-
-
+        
         JLabel label = new JLabel();
         label.setHorizontalAlignment(SwingConstants.CENTER);
-      //ImageIcon image = new ImageIcon("images/dog.jpg");
-       //Image sc = image.getImage().getScaledInstance(200, 150, Image.SCALE_SMOOTH);
-        //label.setIcon(new ImageIcon(sc));
-        //label.setHorizontalAlignment(SwingConstants.CENTER);
-        //frame.add(label, BorderLayout.CENTER);
-
+    
         JTextField txtField = new JTextField(5);
         JButton button = new JButton("Check");
         JLabel resultLabel = new JLabel("", SwingConstants.CENTER);
@@ -38,17 +31,14 @@ public class AnimalApp {
 
         JPanel panel = new JPanel();
         panel.add(new JLabel("Enter the first letter: "));
-        //panel.add();
         panel.add(txtField);
         panel.add(button);
-        //frame.add(panel, BorderLayout.SOUTH);
 
         frame.setLayout(new BorderLayout());
         frame.add(label, BorderLayout.CENTER);
         frame.add(panel, BorderLayout.SOUTH);
         frame.add(resultLabel, BorderLayout.NORTH);
-
-        //button.setIcon(image);
+        
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
