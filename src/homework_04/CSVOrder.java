@@ -41,8 +41,8 @@ public class CSVOrder {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(",");
-                if (parts.length == 4 && parts[3].equals(orderDate)) {
-                    System.out.println("Name:" + parts[1] + "Price:" + parts[2] + "Date:" + parts[3]);
+                if (parts.length == 3 && parts[2].equals(orderDate)) {
+                    System.out.println("Name:" + parts[0] + "Price:" + parts[1] + "Date:" + parts[2]);
                 }
             }
         }
@@ -61,8 +61,8 @@ public class CSVOrder {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(",");
-                if (parts.length == 4 && parts[1].equalsIgnoreCase(customerName)) {
-                    totalPrice += Double.parseDouble(parts[2]);
+                if (parts.length == 3 && parts[0].equalsIgnoreCase(customerName)) {
+                    totalPrice += Double.parseDouble(parts[1]);
                 }
             }
             System.out.println("Total paid amount of " + customerName + ": " + totalPrice);
